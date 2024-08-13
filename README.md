@@ -1,6 +1,6 @@
 # EasyDB
 
-A simple, stupid even, python wrapper around psycopg for loading data into a postgres DB.  Lightweight, opensource, and Free\* (sort of)
+A simple, stupid even, python wrapper around psycopg for loading data into a postgres DB.  Lightweight, open source, and free\* (sort of)
 
 ## Motivations
 

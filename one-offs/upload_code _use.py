@@ -10,11 +10,11 @@ def main():
         df = df[['Date', 'Timestamp (CT)', 'Order ID', 'Channel', 'Discount Code',
        'Revenue', 'Campaign Detail', 'Last Touch Channel', 'Response', 'Zip',
        'Customer Type']]
+        df["Client"] = file.split(".")[0]
         d.append(df)
     data = pd.concat(d)
     dl = DataLoader(data)
     data = dl.data
-    print(data.dtypes)
     conn_str = f'dbname=test2 user={os.getenv("PGUSER")} password={os.getenv("PGPASSWORD")}' 
     pg = PostGres(conn_str,"codes", data=data)
     pg.createTable()
